@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ag grid test</title>
+    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-material.css">
+    <style>
+        body {
+            padding: 0;
+            margin: 0 auto; 
+        }
+        input {
+            margin: 10px;
+        }
+        .ag-theme-material {
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" id="filter-text-box" placeholder="Filter..." oninput="onFilterTextBoxChanged()"/>
+    <input type="text" id="filter-username"  placeholder="fiter username" oninput="externalFilterChanged(this)" />
+    <input type="button" id="filter-btn" onclick="clearFilter()" value="Clear"/>
+    <input type="button" id="get-data" onclick="getRowData()" value="get Data" />
+    <div id="myGrid" style="height: 90vh;width:98vw;" class="ag-theme-material"></div>
+    <script type="text/javascript" src="grid-config.js"></script>
+    
+</body>
+</html>
